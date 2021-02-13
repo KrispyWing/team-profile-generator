@@ -1,0 +1,30 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "Node application which will create a team profile website from inquirer prompts",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrispyWing/team-profile-generator.git"
+  },
+  "keywords": [
+    "team",
+    "profile",
+    "generator"
+  ],
+  "author": "KrispyWing",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/KrispyWing/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/KrispyWing/team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
