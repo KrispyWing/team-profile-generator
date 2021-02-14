@@ -34,10 +34,10 @@ function addManager() {
   ])
   .then(function({name, id, email, officeNumber}) {
     const manager = new Manager(name, id, email, officeNumber);
-    console.log(manager);
+    //console.log(manager);
     team.push(manager);
-    console.log(team);
-    addTeamMember();
+    //console.log(team);
+    return addTeamMember();
   })
   
 };
@@ -91,10 +91,10 @@ function addEngineer() {
   ])
   .then(function({name, id, email, github}) {
     const engineer = new Engineer(name, id, email, github);
-    console.log(engineer);
+    //console.log(engineer);
     team.push(engineer);
-    console.log(team);
-    addMore();
+    //console.log(team);
+    return addMore();
   })
 };
 
@@ -124,10 +124,10 @@ function addIntern() {
   ])
   .then(function({name, id, email, school}) {
     const intern = new Intern(name, id, email, school);
-    console.log(intern);
+    //console.log(intern);
     team.push(intern);
-    console.log(team);
-    addMore();
+    //console.log(team);
+    return addMore();
   })
 };
 
@@ -147,11 +147,14 @@ function addMore() {
     }
   })
   .then(pageHTML => {
-    writeFile('./dist/index.html', pageHTML);
+    return writeFile('./dist/index.html', pageHTML);
   })
-}
+  .catch(err => {
+    console.log('');
+  }); 
+};
 
-const writeFile = (fileName, data) => {
+const writeFile = (fileName, data) => {  
   fs.writeFile(fileName, data, err => {
     if (err) {
       console.log('writeFile function error' + err);

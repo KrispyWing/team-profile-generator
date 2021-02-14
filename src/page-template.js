@@ -3,15 +3,15 @@ const createManagerCard = function(manager) {
   return `
     <div class="col-4 mt-4">
       <div class="card">
-        <div> class="card-header">
+        <div class="card-header">
           <h3>${manager.name}</h3>
-          <h4>Manager</h4>
+          <h4><span class="material-icons">manage_accounts</span> Manager</h4>          
         </div>
 
         <div class="card-body">
           <p class="">ID: ${manager.id}</p>
           <p class="">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
-          <p> class="">Office #: ${manager.officeNumber}</p>
+          <p class="">Office #: ${manager.officeNumber}</p>
         </div>
       </div>
     </div>
@@ -23,15 +23,15 @@ const createEngineerCard = function(engineer) {
   return `
     <div class="col-4 mt-4">
       <div class="card">
-        <div> class="card-header">
+        <div class="card-header">
           <h3>${engineer.name}</h3>
-          <h4>Engineer</h4>
+          <h4><span class="material-icons">engineering</span> Engineer</h4>          
         </div>
 
         <div class="card-body">
           <p class="">ID: ${engineer.id}</p>
           <p class="">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
-          <p> class="">Github:<a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+          <p class="">Github: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
         </div>
       </div>
     </div>
@@ -42,9 +42,9 @@ const createInternCard = function(intern) {
   return `
     <div class="col-4 mt-4">
       <div class="card">
-        <div> class="card-header">
+        <div class="card-header">
           <h3>${intern.name}</h3>
-          <h4>Intern</h4>
+          <h4><span class="material-icons">school</span> Intern</h4>          
         </div>
 
         <div class="card-body">
@@ -100,8 +100,8 @@ const generateTeamPage = function(teamCards) {
   </head>
   <body>
       <header>
-          <nav class="navbar" id="navbar">
-              <span class="navbar-brand mb-0 h1 w-100 text-center" id="navbar-text">Team Profile</span>
+          <nav class="navbar bg-secondary text-light" id="navbar">
+              <h1 class="mb-0 h1 w-100 text-center" id="navbar-text">Team Profile</h1>
           </nav>
       </header>
       <main>
