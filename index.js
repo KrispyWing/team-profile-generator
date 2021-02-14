@@ -9,7 +9,7 @@ const Intern = require('./lib/Intern');
 const team = [];
 
 function addManager() {
-  inquirer
+  return inquirer
     .prompt([
     {
       type: 'input',
@@ -141,14 +141,37 @@ function addMore() {
   ])
   .then(function({ addmore }) {
     if (addmore) {
-      addTeamMember();
+      return addTeamMember();
     } else {
       return generatePage(team); // create page function will get called here
     }
   })
+  .then(pageHTML => {
+    writeFile('./dist/index.html', pageHTML);
+  })
 }
+
+const writeFile = (fileName, data) => {
+  fs.writeFile(fileName, data, err => {
+    if (err) {
+      console.log('writeFile function error' + err);
+      return;
+    } else {
+      console.log("Your team profile page has been created!");
+    }
+  })
+};
     
 
 addManager()
-
+//.then(addMore)
+// .then(team => {
+//   return generatePage(team);
+// })
+//.then(pageHTML => {
+//  writeFile('./dist/index.html', pageHTML);
+//})
+//.catch(err => {
+//  console.log('catch error' + err);
+//});
 
