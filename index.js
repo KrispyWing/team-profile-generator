@@ -1,4 +1,6 @@
 const inquirer = require('inquirer');
+const fs = require('fs');
+const generatePage = require('./src/page-template.js');
 
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
@@ -141,7 +143,7 @@ function addMore() {
     if (addmore) {
       addTeamMember();
     } else {
-      return; // create page function will get called here
+      return generatePage(team); // create page function will get called here
     }
   })
 }
