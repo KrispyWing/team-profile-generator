@@ -2,7 +2,7 @@
 
 ## Description
 This is a Node.js app which will create a basic Team profile website based on some basic questions.
-You will always start by creating a Manager and then can add as many Engineer or Intern team memebers as necessary.
+You will always start by creating a Manager and then can add as many Engineer or Intern team members as necessary.
 
 ## Table of Contents
 * [Installation](#Installation)
