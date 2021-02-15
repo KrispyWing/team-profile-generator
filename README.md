@@ -13,12 +13,16 @@ You will always start by creating a Manager and then can add as many Engineer or
 ## Installation
 After copying the repository run "npm i" to install the necessary dependencies.
 
+Questions use the Inquirer package.
+
+Tests were created using jest.
+
 ## Usage
 The program can be run from the command using node index.js.
 
 Upon completion the created index.html file will be placed in the dist folder.
 
-Object js files can be tested using the npm run test command.
+Object js files can be tested using the npm run test command. 
 
 ## Technologies
 This progam was created using:
@@ -32,5 +36,9 @@ This progam was created using:
 ![Bootstrap](https://img.shields.io/badge/-Bootstrap-purple?style=for-the-badge&logo=Bootstrap&logoColor=black)
 
 ## Preview
+Screenshot of HTML output
+![Output Preview](./TGP-preview.png)
+
 Demo of the program
 
+[Walkthrough video link](https://drive.google.com/file/d/1q8T3ipjs6K2U2v_w0z12DqDavJa069fO/view?usp=sharing)
