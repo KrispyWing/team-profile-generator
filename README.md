@@ -24,6 +24,8 @@ Upon completion the created index.html file will be placed in the dist folder.
 
 Object js files can be tested using the npm run test command. 
 
+Currently there is a UnhandledPromiseReject error that occurs when you go to add the 3rd or subsequent member of the team. It does not affect the creation of the html page.
+
 ## Technologies
 This progam was created using:
 
